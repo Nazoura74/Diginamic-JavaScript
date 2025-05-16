@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Test des fonctions JS</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    label, input, button { margin: 5px 0; display: block; }
+    hr { margin: 20px 0; }
+  </style>
+</head>
+<body>
+
+  <h1>Test des Fonctions JavaScript</h1>
+
+  <!-- Check Majority -->
+  <h2>Vérifier la majorité</h2>
+  <label>Âge : <input type="number" id="ageInput" /></label>
+  <button onclick="checkMajority(parseInt(document.getElementById('ageInput').value))">Vérifier</button>
+
+  <hr>
+
+  <!-- Jour de la semaine -->
+  <h2>Nom du jour</h2>
+  <label>Numéro (1-7) : <input type="number" id="dayNumber" /></label>
+  <button onclick="alert(getDayName(parseInt(document.getElementById('dayNumber').value)))">Afficher le jour</button>
+
+  <hr>
+
+  <!-- Afficher 1 à 10 -->
+  <h2>Afficher les nombres de 1 à 10</h2>
+  <button onclick="displayNumbers()">Afficher</button>
+
+  <hr>
+
+  <!-- Compte à rebours -->
+  <h2>Compte à rebours de 5 à 1</h2>
+  <button onclick="countDown()">Démarrer</button>
+
+  <hr>
+
+  <!-- Pair ou impair -->
+  <h2>Pair ou impair</h2>
+  <button onclick="showEvenOdd()">Afficher</button>
+
+  <hr>
+
+  <!-- Deviner le nombre -->
+  <h2>Jeu : Deviner le nombre</h2>
+  <label>Nombre secret (1 à 10) : <input type="number" id="secretNum" /></label>
+  <button onclick="guessNumber(parseInt(document.getElementById('secretNum').value))">Commencer</button>
+
+  <hr>
+
+  <!-- Connexion -->
+  <h2>Connexion simulée</h2>
+  <label>Mot de passe correct : <input type="text" id="passwordInput" /></label>
+  <button onclick="login(document.getElementById('passwordInput').value)">Se connecter</button>
+
+  <hr>
+
+  <!-- Nombre parfait -->
+  <h2>Nombre parfait ?</h2>
+  <label>Nombre à tester : <input type="number" id="perfectNumberInput" /></label>
+  <button onclick="alert(isPerfectNumber(parseInt(document.getElementById('perfectNumberInput').value)) ? 'Oui' : 'Non')">Vérifier</button>
+
+  <script src="ex3.js"></script>
+</body>
+</html>

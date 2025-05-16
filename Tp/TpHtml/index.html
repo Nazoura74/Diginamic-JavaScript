@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion de livres</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input, button { margin: 5px; }
+    .book { margin: 10px 0; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Bibliothèque</h1>
+  <script src="script.js"></script>
+
+  <div>
+    <h2>Ajouter un livre</h2>
+    <input type="text" id="title" placeholder="Titre">
+    <input type="text" id="author" placeholder="Auteur">
+    <input type="number" id="year" placeholder="Année">
+    <button onclick="addBook()">Ajouter</button>
+  </div>
+
+  <div>
+    <h2>Rechercher un livre</h2>
+    <input type="text" id="searchTitle" placeholder="Titre exact">
+    <button onclick="searchBook()">Rechercher</button>
+  </div>
+
+  <div>
+    <h2>Supprimer un livre</h2>
+    <input type="text" id="deleteTitle" placeholder="Titre exact">
+    <button onclick="deleteBook()">Supprimer</button>
+  </div>
+
+  <h2>Liste des livres</h2>
+  <div id="bookList"></div>
+
+</body>
