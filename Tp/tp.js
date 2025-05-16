@@ -113,5 +113,4 @@ function lancerInterface() {
   } while (choix !== "5");
 }
 
-// Lancement du programme
 lancerInterface();
