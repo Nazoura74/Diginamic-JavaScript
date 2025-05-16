@@ -1,7 +1,7 @@
-// Bibliothèque (tableau contenant les livres)
+
 let bibliotheque = [];
 
-// Constructeur de livre
+// interface  livre
 function Livre(titre, annee, auteur) {
   this.titre = titre;
   this.annee = annee;
@@ -12,7 +12,7 @@ function Livre(titre, annee, auteur) {
   };
 }
 
-// Fonction pour ajouter un livre
+// ajout  livre
 function ajouterLivre() {
   while (true) {
     try {
@@ -38,7 +38,7 @@ function ajouterLivre() {
   }
 }
 
-// Fonction pour afficher tous les livres
+// Afficher les livres
 function afficherLivres() {
   if (bibliotheque.length === 0) {
     alert("Aucun livre dans la bibliothèque.");
@@ -52,7 +52,7 @@ function afficherLivres() {
   alert(message);
 }
 
-// Fonction pour rechercher un livre par son titre
+// Recherche d'un livre
 function rechercherLivre() {
   let titre = prompt("Entrez le titre du livre à rechercher :");
   let livre = bibliotheque.find(l => l.titre.toLowerCase() === titre.toLowerCase());
