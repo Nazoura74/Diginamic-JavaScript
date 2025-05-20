@@ -47,7 +47,6 @@ function afficherLivres() {
         const li = document.createElement("li");
         li.textContent = livre.afficherInfos();
 
-        // BOUTON SUPPRIMER (visible uniquement pour le bibliothécaire)
         if (currentRole === "bibliothecaire") {
             const supprimerBtn = document.createElement("button");
             supprimerBtn.textContent = "Supprimer";
@@ -58,7 +57,6 @@ function afficherLivres() {
             li.appendChild(supprimerBtn);
         }
 
-        // BOUTONS EMPRUNTER / RENDRE pour le membre
         if (currentRole === "membre") {
             if (!livre.empruntePar) {
                 const emprunterBtn = document.createElement("button");
