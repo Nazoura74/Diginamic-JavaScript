@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Jeu - Guerrier, Fée, Magicien</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Mini Jeu de Combat</h1>
+
+  <div id="characters">
+    <div id="thor" class="character"></div>
+    <div id="elia" class="character"></div>
+    <div id="merlin" class="character"></div>
+  </div>
+
+  <div id="controls">
+    <button onclick="thor.attaquer(merlin)">Thor attaque Merlin</button>
+    <button onclick="thor.defendre()">Thor se défend</button>
+    <button onclick="elia.soigner(merlin)">Elia soigne Merlin</button>
+    <button onclick="elia.voler()">Elia vole</button>
+    <button onclick="merlin.lancerSort(thor)">Merlin lance un sort sur Thor</button>
+    <button onclick="merlin.regenererMana()">Merlin régénère son mana</button>
+    <button onclick="updateUI()">Mettre à jour l'affichage</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

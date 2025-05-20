@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Jeu de Personnages</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Combat entre Personnages</h1>
+
+  <div class="personnages">
+    <div id="thor" class="card"></div>
+    <div id="elia" class="card"></div>
+    <div id="merlin" class="card"></div>
+  </div>
+
+  <div class="actions">
+    <button onclick="thor.defendre()">Thor se défend</button>
+    <button onclick="thor.attaquer(merlin)">Thor attaque Merlin</button>
+    <button onclick="elia.soigner(merlin)">Elia soigne Merlin</button>
+    <button onclick="merlin.lancerSort(thor)">Merlin lance un sort sur Thor</button>
+    <button onclick="merlin.regenererMana()">Merlin régénère sa mana</button>
+  </div>
+
+  <div id="log" class="log"></div>
+</body>
+</html>

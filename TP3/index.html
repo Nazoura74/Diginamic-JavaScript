@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>TP3 Bibliothèque</title>
+    <style>
+        .hidden { display: none; }
+        button { margin-left: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Gestion de Bibliothèque</h1>
+
+    <div class="button" id="bouton">
+        <button onclick="setRole('membre')">Je suis un Membre</button>
+        <button onclick="setRole('bibliothecaire')">Je suis un Bibliothécaire</button>
+    </div>
+
+    <div id="formAjout" class="hidden">
+        <h3>Ajouter un livre</h3>
+        <form id="ajoutForm">
+            <input type="text" id="titre" placeholder="Titre" required>
+            <input type="text" id="auteur" placeholder="Auteur" required>
+            <input type="number" id="annee" placeholder="Année" required>
+            <select id="typeLivre" required>
+                <option value="">-- Type de livre --</option>
+                <option value="numerique">Numérique</option>
+                <option value="papier">Papier</option>
+            </select>
+            <input type="number" id="tailleFichier" placeholder="Taille du fichier (Mo)" class="hidden">
+            <input type="number" id="nombrePages" placeholder="Nombre de pages" class="hidden">
+            <button type="submit">Ajouter</button>
+        </form>
+    </div>
+
+    <ul id="listeLivres"></ul>
+
+    <script src="Livre.js"></script>
+    <script src="LivreNumerique.js"></script>
+    <script src="LivrePapier.js"></script>
+    <script src="Utilisateur.js"></script>
+    <script src="Membre.js"></script>
+    <script src="Bibliothecaire.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
